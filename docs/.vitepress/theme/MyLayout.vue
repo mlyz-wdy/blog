@@ -2,53 +2,16 @@
 <template>
   <Layout>
     <template #doc-after>
-      <div id="gitalk-container"></div> 
+      <Comment />
     </template>
   </Layout>
 </template>
 
 <script setup>
-import { onMounted, watch } from 'vue';
-import 'gitalk/dist/gitalk.css';
-import Gitalk from 'gitalk';
 import DefaultTheme from 'vitepress/theme';
-import { useRoute } from 'vitepress';
-
+import Comment from '../components/Comment.vue';
 const { Layout } = DefaultTheme;
 
-const route = useRoute();
-
-const emptyNode = (node) => {
-  //循环删除子元素，一直删除第一个子元素直到没有子元素即为清空
-  while (node.hasChildNodes()) {
-    node.removeChild(node.firstChild);
-  }
-};
-
-const initGitalk = () => {
-  if (typeof window !== undefined) {
-      const gitment = new Gitalk({
-        id: { name: `${location.pathname.replace(/\W/g, '')}` }, // 可选。默认为 location.href
-        owner: 'mlyz-wdy', // GitHub repository 所有者
-        repo: 'blog-comment', // GitHub repository
-        clientID: '8d75bd3d346537698e1e', // 自己的clientID
-        clientSecret: 'ab6651df300fb17af64bb5bb18fbef4baf6d1a31', // 自己的clientSecret
-        admin: ['mlyz-wdy'], // GitHub repository 所有者
-        labels: [{ name: 'Gitalk' }], // GitHub issue 的标签
-        createIssueManually: true, //如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
-        // proxy: "https://vercel.younglina.top/github_access_token",
-      });
-      gitment.render('gitalk-container');
-  }
-};
-onMounted(initGitalk);
-
-watch(
-  () => route.path,
-  () => {
-    initGitalk();
-  }
-);
 </script>
 <style>
 .gt-container .gt-header-textarea {
