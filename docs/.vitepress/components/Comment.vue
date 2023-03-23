@@ -3,16 +3,13 @@
     <div id="gitalk-container"></div>
   </div>
 </template>
-<script>
+
+<script setup>
 import Gitalk from "gitalk"
 import md5 from 'md5'
 import "gitalk/dist/gitalk.css"
-export default {
-  name: "git-talk",
-  data() {
-    return {}
-  },
-  mounted() {
+import { onMounted } from "vue";
+onMounted(() => {
     const commentConfig = {
         id: md5(location.pathname), // 可选。默认为 location.href
         owner: 'mlyz-wdy', // GitHub repository 所有者
@@ -27,8 +24,7 @@ export default {
     }
     const gitalk = new Gitalk(commentConfig)
     gitalk.render("gitalk-container")
-  },
-}
+})
 </script>
 <style>
 .gt-container .gt-header-textarea {
