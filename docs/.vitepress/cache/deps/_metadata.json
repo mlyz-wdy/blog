@@ -1,23 +1,17 @@
 {
-  "hash": "385a6c30",
-  "browserHash": "46e9fa41",
+  "hash": "90ae69fd",
+  "browserHash": "40a6c5ae",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/registry.npmmirror.com+vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "5430849e",
+      "fileHash": "dfcb88d4",
       "needsInterop": false
     },
-    "md5": {
-      "src": "../../../../node_modules/.pnpm/registry.npmmirror.com+md5@2.3.0/node_modules/md5/md5.js",
-      "file": "md5.js",
-      "fileHash": "fc2df812",
-      "needsInterop": true
-    },
     "gitalk": {
-      "src": "../../../../node_modules/.pnpm/registry.npmmirror.com+gitalk@1.8.0/node_modules/gitalk/dist/gitalk.js",
+      "src": "../../../../node_modules/.pnpm/github.com+lesonky+gitalk@87af8b0edd6e2a7f655e05c4cf7f90883574c8ab/node_modules/gitalk/dist/gitalk.js",
       "file": "gitalk.js",
-      "fileHash": "eeb4404e",
+      "fileHash": "ee5287c1",
       "needsInterop": true
     }
   },

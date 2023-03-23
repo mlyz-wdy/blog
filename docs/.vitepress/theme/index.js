@@ -1,11 +1,9 @@
-import Theme from "vitepress/theme"
+// .vitepress/theme/index.js
 
-import comment from "../components/git-talk.vue"
+import Theme from 'vitepress/theme'
+import MyLayout from './MyLayout.vue'
+
 export default {
   ...Theme,
-  enhanceApp(ctx) {
-    Theme.enhanceApp(ctx)
-    ctx.app.component("git-talk", comment)
-  },
+  Layout: MyLayout
 }
-

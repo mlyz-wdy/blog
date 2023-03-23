@@ -16,7 +16,7 @@
         "vue": "^3.2.47"
     },
     "dependencies": {
-        "gitalk": "^1.8.0",
+        "gitalk": "git://github.com/lesonky/gitalk.git",
         "md5": "^2.3.0"
     }
 }

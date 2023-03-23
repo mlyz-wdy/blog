@@ -1,13 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
-  gitalk: ^1.8.0
+  gitalk: git://github.com/lesonky/gitalk.git
   md5: ^2.3.0
   vitepress: 1.0.0-alpha.61
   vue: ^3.2.47
 
 dependencies:
-  gitalk: registry.npmmirror.com/gitalk/1.8.0
+  gitalk: github.com/lesonky/gitalk/87af8b0edd6e2a7f655e05c4cf7f90883574c8ab
   md5: registry.npmmirror.com/md5/2.3.0
 
 devDependencies:
@@ -15,6 +15,26 @@ devDependencies:
   vue: registry.npmmirror.com/vue/3.2.47
 
 packages:
+
+  github.com/lesonky/gitalk/87af8b0edd6e2a7f655e05c4cf7f90883574c8ab:
+    resolution: {tarball: https://codeload.github.com/lesonky/gitalk/tar.gz/87af8b0edd6e2a7f655e05c4cf7f90883574c8ab}
+    name: gitalk
+    version: 1.7.2
+    dependencies:
+      autosize: registry.npmmirror.com/autosize/3.0.21
+      axios: registry.npmmirror.com/axios/0.19.2
+      date-fns: registry.npmmirror.com/date-fns/2.16.1
+      es6-promise: registry.npmmirror.com/es6-promise/4.1.1
+      github-markdown-css: registry.npmmirror.com/github-markdown-css/2.8.0
+      node-polyglot: registry.npmmirror.com/node-polyglot/2.2.2
+      preact: registry.npmmirror.com/preact/8.1.0
+      preact-compat: registry.npmmirror.com/preact-compat/3.16.0_preact@8.1.0
+      react-flip-move: registry.npmmirror.com/react-flip-move/2.9.14
+    transitivePeerDependencies:
+      - react
+      - react-dom
+      - supports-color
+    dev: false
 
   registry.npmmirror.com/@algolia/autocomplete-core/1.7.4:
     resolution: {integrity: sha512-daoLpQ3ps/VTMRZDEBfU8ixXd+amZcNJ4QSP3IERGyzqnL5Ch8uSRFt/4G8pUvW9c3o6GA4vtVv4I4lmnkdXyg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@algolia/autocomplete-core/-/autocomplete-core-1.7.4.tgz}
@@ -946,26 +966,6 @@ packages:
     dependencies:
       call-bind: registry.npmmirror.com/call-bind/1.0.2
       get-intrinsic: registry.npmmirror.com/get-intrinsic/1.2.0
-    dev: false
-
-  registry.npmmirror.com/gitalk/1.8.0:
-    resolution: {integrity: sha512-/bWlUAeb0gXuo1SzBeduS07T4PEyL5WoRgxewUIg3liVUof5hUgW/hhx3ns2PJuiFkOxnsSuk1FPzwf6YESJaA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/gitalk/-/gitalk-1.8.0.tgz}
-    name: gitalk
-    version: 1.8.0
-    dependencies:
-      autosize: registry.npmmirror.com/autosize/3.0.21
-      axios: registry.npmmirror.com/axios/0.19.2
-      date-fns: registry.npmmirror.com/date-fns/2.16.1
-      es6-promise: registry.npmmirror.com/es6-promise/4.1.1
-      github-markdown-css: registry.npmmirror.com/github-markdown-css/2.8.0
-      node-polyglot: registry.npmmirror.com/node-polyglot/2.2.2
-      preact: registry.npmmirror.com/preact/8.1.0
-      preact-compat: registry.npmmirror.com/preact-compat/3.16.0_preact@8.1.0
-      react-flip-move: registry.npmmirror.com/react-flip-move/2.9.14
-    transitivePeerDependencies:
-      - react
-      - react-dom
-      - supports-color
     dev: false
 
   registry.npmmirror.com/github-markdown-css/2.8.0:
