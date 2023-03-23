@@ -16,9 +16,9 @@
       const commentConfig = {
         clientID: "",
         clientSecret: "",
-        repo: "你的仓库名",
-        owner: "你的账户名",
-        admin: ["你的账户名"],
+        repo: "blog",
+        owner: "mlyz-wdy",
+        admin: ["mlyz-wdy"],
         id: md5(location.pathname),
         distractionFreeMode: false,
       }
