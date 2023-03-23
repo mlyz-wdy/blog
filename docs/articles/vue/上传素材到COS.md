@@ -17,7 +17,7 @@ categories:
 
 后端需要写接口，返回必要的参数
 
-```
+```js
 {
   expiredTime: 1650611112,
   expiration: '2022-04-22T07:05:12Z',
@@ -35,7 +35,7 @@ categories:
 
 ## 2. 前端请求将参数配置到 cos
 
-```
+```js
 const cosArg = {
   bucket: 'bucket01-1305714290',
   region: 'ap-shanghai'
@@ -85,7 +85,7 @@ export function uploadCos(_obj) {
 
 ## 3. 页面中引入
 
-```
+```js
 <template>
    <el-upload :http-request="uploadImg" action="" multiple accept=".jpg, .png, .jpeg, .gif, .svg" :show-file-list="false">
       <div class="fc fca upload">

@@ -3,7 +3,7 @@ export default {
     // site-level options
     title: '码路芽子',
     description: 'mlyz 的个人博客',
-  
+    base: '/blog/',
     themeConfig: {
         logo: "/images/logo.png",
         nav: [
@@ -23,7 +23,6 @@ export default {
               {
                 text: "基础",
                 items: [
-                  
                 ],
               },
               {
@@ -44,7 +43,6 @@ export default {
               {
                 text: "基础",
                 items: [
-                  
                 ],
               },
               {

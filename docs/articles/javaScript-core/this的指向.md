@@ -13,7 +13,7 @@ categories:
 
  **定义一个函数，采用三种不同的方式对它进行调用，三种不同的结果**
 
-```
+```js
 // 定义一个函数
 function foo() {
   console.log(this)
@@ -34,9 +34,9 @@ foo.call('abl') // this => String {"abc"} 对象
 ```
 
 1.  函数调用时候，JavaScript 默认给 this 绑定个值
-1.  this 的绑定和定义的位置没有关系
-1.  this 的绑定和调用方式以及调用的位置有关系
-1.  this 是被运行时绑定的
+2.  this 的绑定和定义的位置没有关系
+3.  this 的绑定和调用方式以及调用的位置有关系
+4.  this 是被运行时绑定的
 
 ## this 的绑定规则
 
@@ -44,7 +44,7 @@ foo.call('abl') // this => String {"abc"} 对象
 
 普通的函数被独立的调用
 
-```
+```js
 // 1. 独立调用普通函数
 function foo() {
   console.log(this)
@@ -69,7 +69,7 @@ test(obj.foo)
 
 ### 隐式绑定
 
-```
+```js
 function foo() {
   console.log('foo 函数', this)
 }
@@ -101,7 +101,7 @@ JavaScript 所有函数都可以使用 call 和 apply 方法
 -   会生成一个新的绑定函数
 -   绑定的函数是一个 exotic function object（怪异函数对象， ECMAScript 2015 术语）
 
-```
+```js
 let obj = {
   name: 'why',
 }
@@ -126,7 +126,7 @@ JavaScript 中的函数可以当做构造函数使用，使用 new 操作符
 1.  **执行函数体中的代码**
 1.  **没有显示返回非空对象，默认返回这个对象**
 
-```
+```js
 function foo() {
   console.log('foo 函数', this)
   this.name = "why"

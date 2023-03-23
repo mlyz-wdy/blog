@@ -18,7 +18,7 @@ vue项目想换 typeScript 来写，但是安装依赖报错，需要降级node�
 安装的时候容易，去官网下个包就安装了，卸载起来可真麻烦，不过总结一下，找找各位的卸载方法，融合起来
 
 就用下面命令来卸载（依次执行）
-```
+```js
 $ sudo npm uninstall npm -g
 $ sudo rm -rf /usr/local/lib/node /usr/local/lib/node_modules /var/db/receipts/org.nodejs.*
 $ sudo rm -rf /usr/local/include/node /Users/$USER/.npm
@@ -29,7 +29,7 @@ $ sudo rm /usr/local/bin/node
 mac下的安装
 
 命令是：
-```
+```js
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
 $ nvm -version
@@ -37,7 +37,7 @@ $ nvm -version
 安装完成之后，就可以尝试 node 各种姿势，哦不对，是各种版本了
 
 **nvm常用指令**
-```
+```js
 nvm --help                          显示所有信息
 nvm --version                       显示当前安装的nvm版本
 nvm install [-s] <version>          安装指定的版本，如果不存在.nvmrc,就从指定的资源下载安装
@@ -58,7 +58,7 @@ nvm cache clear                     清空nvm的cache
 ### 范例
 按照我的习惯，给个范例出来
 
-```
+```js
 // 1. 安装 8.0 版本
 $ nvm install 8.0
 
