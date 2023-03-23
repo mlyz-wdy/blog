@@ -97,6 +97,10 @@ export default {
               {
                 items: [
                   {
+                    text: "使用VitePress建立自己的博客",
+                    link: "/articles/other/使用VitePress建立自己的博客",
+                  },
+                  {
                     text: "nvm管理node",
                     link: "/articles/other/nvm管理node",
                   },
