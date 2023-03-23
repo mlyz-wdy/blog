@@ -36,7 +36,7 @@ const initGitalk = () => {
       const gitment = new Gitalk({
         id: { name: `${location.pathname.replace(/\W/g, '')}` }, // 可选。默认为 location.href
         owner: 'mlyz-wdy', // GitHub repository 所有者
-        repo: 'https://mlyz-wdy.github.io/blog/', // GitHub repository
+        repo: 'blog', // GitHub repository
         clientID: '8d75bd3d346537698e1e', // 自己的clientID
         clientSecret: 'ab6651df300fb17af64bb5bb18fbef4baf6d1a31', // 自己的clientSecret
         admin: ['mlyz-wdy'], // GitHub repository 所有者
