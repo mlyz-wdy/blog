@@ -21,7 +21,8 @@ export default {
         admin: ['mlyz-wdy'], // GitHub repository 所有者
         labels: [{ name: 'Gitalk' }], // GitHub issue 的标签
         createIssueManually: true,
-      distractionFreeMode: false,
+        title: 'mlyz',
+        distractionFreeMode: false,
     }
     const gitalk = new Gitalk(commentConfig)
     gitalk.render("gitalk-container")
