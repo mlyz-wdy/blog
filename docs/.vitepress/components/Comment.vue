@@ -5,6 +5,7 @@
 </template>
 <script>
 import Gitalk from "gitalk"
+import md5 from 'md5'
 import "gitalk/dist/gitalk.css"
 export default {
   name: "git-talk",
@@ -13,7 +14,7 @@ export default {
   },
   mounted() {
     const commentConfig = {
-        id: { name: `${location.pathname.replace(/\W/g, '')}` }, // 可选。默认为 location.href
+        id: md5(location.name), // 可选。默认为 location.href
         owner: 'mlyz-wdy', // GitHub repository 所有者
         repo: 'blog', // GitHub repository
         clientID: '8d75bd3d346537698e1e', // 自己的clientID
