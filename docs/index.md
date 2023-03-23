@@ -19,15 +19,19 @@ hero:
       text: 在 GitHub 上查看
       link: https://github.com/mlyz-wdy
 features:
-  - icon: 🛠️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
-    link: /guide/start
-    linkText: 了解更多
-  - icon: ⚡️
-    title: Another cool feature
-    details: Lorem ipsum...
   - icon: 🌞
-    title: Another cool feature
-    details: Lorem ipsum...
+    title: javaScript 核心系列
+    details: 基础知识积累回顾
+    link: /articles/javaScript-core/构造函数、原型、原型链
+    linkText: 查看更多
+  - icon: ⚡️
+    title: Vue 三方组件库
+    details: 一些使用过的很好用的三方库
+    link: /articles/libs/VForm3低代码初体验
+    linkText: 查看更多
+  - icon: 🛠️
+    title: 其他
+    details: 一些积累，操作，边缘事情
+    link: "/articles/other/使用VitePress建立自己的博客"
+    linkText: 查看更多
 ---

@@ -1,31 +1,38 @@
-# 10分钟使用VitePress + 自动部署github pages 建立自己的博客
+10分钟使用VitePress + 自动部署github pages 建立自己的博客
+==========================================
 
-[VitePress 中文文档地址](https://xxy5.com/vitepress-cn/config-app.html#appearance)
+[VitePress 中文文档地址](https://xxy5.com/vitepress-cn/config-app.html#appearance)  
 [VitePress 英文文档地址](https://vitepress.dev/)
 
-## 1. github 创建一个仓库，blog
-## 2. clone 到本地
-## 3. 初始化 VitePress
-**注：因我用的pnpm安装，如果大家也想用，先执行 `npm i pnpm -g` 安装一下
-1. 进入仓库执行
-	
+1\. github 创建一个仓库，blog
+----------------------
+
+2\. clone 到本地
+-------------
+
+3\. 初始化 VitePress
+-----------------
+
+**注：因我用的pnpm安装，如果大家也想用，先执行 `npm i pnpm -g` 安装一下**
+
+1.  进入仓库执行
+    
     ```
     pnpm init
     ```
-2. 安装需要的依赖
-	
+2.  安装需要的依赖
+    
     ```
-    --dev vitepress vue
+    pnpm i --dev vitepress vue
     ```
-
-3. 写入第一个文档
-	
+3.  写入第一个文档
+    
     ```
     mkdir docs && echo '# Hello VitePress' > docs/index.md
     ```
-4. 在 `page.json` 加入执行脚本
-	
-    ```json
+4.  在 `page.json` 加入执行脚本
+    
+    ```
     {
         ...
         "scripts": {
@@ -35,13 +42,18 @@
         },
         ...
     }
-   ```
-5. 在本地开启服务
+    ```
+5.  在本地开启服务
+    
     ```
     pnpm docs:dev
     ```
-## 4. 配置VitePress
-1. 文件结构
+
+4\. 配置VitePress
+---------------
+
+1.  文件结构
+    
     ```
     .
     ├─ .github // 部署相关，后面会说
@@ -57,10 +69,11 @@
     │  │  ├─ images // 文章中的图片
     └─ package.json
     ```
-2. config.js 配置
-
+2.  config.js 配置
+    
     以下内容都有注释，大家根据自己情况增减，官方文档也非常清楚
-    ```js
+    
+    ```
     export default {
         title: '码路芽子', // 博客的标题
         description: 'mlyz 的个人博客', // 博客的介绍
@@ -161,10 +174,12 @@
     
     ```
 
-## 5. 上传到 github 自动部署
+5\. 上传到 github 自动部署
+-------------------
 
 在 `.github/workflows/deploy.yml` 中
-```yml
+
+```
 name: Deploy
 
 on:
@@ -191,31 +206,28 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/.vitepress/dist
+
 ```
 
 以上内容可以直接复制使用，如果想修改，可以看文档自行修改
 
-1. 在上传到github中，就会自己执行actions
-
-
-
+1.  在上传到github中，就会自己执行actions
+![iShot_2023-03-23_10.17.31.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a1b2eea0193a4249a29f6fcdf1851047~tplv-k3u1fbpfcp-watermark.image?)
 执行状态可以自行查看
 
-2. 完成之后会在分支中，新增一个分支
+2.  完成之后会在分支中，新增一个分支
+    
+    ![iShot_2023-03-23_10.19.11.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0da2de9038684ea989a20dcc7ca9d517~tplv-k3u1fbpfcp-watermark.image?)
+3.  在 settings/pages 中更换源为 gh-pages  
 
-
-3. 在 settings/pages 中更换源为 gh-pages
-
-
-::: tip
-此时完成了，大家可以看看自己部署的博客了
-:::
+    ![1679538071539.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7758f5bae283496487657a12bdc5b624~tplv-k3u1fbpfcp-watermark.image?)
+此时完成了，大家可以看看自己部署的博客了  
 
 **我反正用了不止10分钟，毕竟还要研究，但你们看到这么清晰的文章，我觉得10分钟足够了，如果超过了，你们反思一下，我哪里写的不清楚，我改还不行么**
 
-::: danger
-我觉得你们一定会报错，如果没报错当我没说
-:::
+**我觉得你们一定会报错，如果没报错当我没说**
 
-**GitHub Action: The process ‘/usr/bin/git‘ failed with exit code 128**
+
+[GitHub Action: The process ‘/usr/bin/git‘ failed with exit code 128](https://juejin.cn/post/7213544005602590780)
+
 
