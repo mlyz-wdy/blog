@@ -1,19 +1,29 @@
 {
-  "hash": "8f0ae189",
-  "browserHash": "bc740462",
+  "hash": "385a6c30",
+  "browserHash": "46e9fa41",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/registry.npmmirror.com+vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "7ff88bca",
+      "fileHash": "5430849e",
       "needsInterop": false
     },
-    "@theme/index": {
-      "src": "../../../../node_modules/.pnpm/registry.npmmirror.com+vitepress@1.0.0-alpha.61/node_modules/vitepress/dist/client/theme-default/index.js",
-      "file": "@theme_index.js",
-      "fileHash": "146e745a",
-      "needsInterop": false
+    "md5": {
+      "src": "../../../../node_modules/.pnpm/registry.npmmirror.com+md5@2.3.0/node_modules/md5/md5.js",
+      "file": "md5.js",
+      "fileHash": "fc2df812",
+      "needsInterop": true
+    },
+    "gitalk": {
+      "src": "../../../../node_modules/.pnpm/registry.npmmirror.com+gitalk@1.8.0/node_modules/gitalk/dist/gitalk.js",
+      "file": "gitalk.js",
+      "fileHash": "eeb4404e",
+      "needsInterop": true
     }
   },
-  "chunks": {}
+  "chunks": {
+    "chunk-RSJERJUL": {
+      "file": "chunk-RSJERJUL.js"
+    }
+  }
 }
