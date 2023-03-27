@@ -33,6 +33,10 @@ export default {
                     link: "/articles/vue/上传素材到COS",
                   },
                   {
+                    text: "使用el-table 合并表格，表格中插入小计",
+                    link: "/articles/vue/使用el-table 合并表格，表格中插入小计",
+                  },
+                  {
                     text: "文件下载",
                     link: "/articles/vue/文件下载",
                   },
